@@ -26,9 +26,7 @@ const Connection = () => {
         axios({
             method: 'post',
             url: 'http://localhost:8080/authentification',
-            data: {
-                loginForm
-            }
+            loginForm
         })
             .then(() => {
                 setSuccess(true)
@@ -41,11 +39,10 @@ const Connection = () => {
     return (
         <div>
             <button>
-                <Link to="/dashboard">I'm a practitioner</Link>
+                <Link to="/practitioner/messages">I'm a practitioner</Link>
             </button>
 
             <form className="form">
-                <h1 className="title">Sodoc</h1>
                 <label for="eMail">eMail :</label>
                 <input id="eMail" type="text" onChange={getLogin} placeholder="Enter your adress mail"></input>
                 <label for="pwd">Password :</label>
