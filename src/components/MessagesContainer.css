@@ -3,10 +3,11 @@
   border-radius: 10px;
   text-align: left;
   margin: 1rem 1rem 1rem 0;
+  padding: 1rem 0;
 }
 
-.MessagesContainer h3 {
+.msg-container-title {
   color: #707070;
   padding-left: 1rem;
-  margin: 1rem;
+  margin: 0 1rem 1rem 1rem;
 }

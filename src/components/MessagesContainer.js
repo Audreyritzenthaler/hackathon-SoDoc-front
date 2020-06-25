@@ -6,7 +6,7 @@ class MessagesContainer extends Component {
   render() {
     return (
       <div className='MessagesContainer'>
-        <h3>Mes messages</h3>
+        <h3 className='msg-container-title'>Mon historique</h3>
         <Messages />
       </div>
     )
