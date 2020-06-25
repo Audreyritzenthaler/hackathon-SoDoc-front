@@ -9,7 +9,7 @@ form {
     box-shadow: -15px 15px 25px rgb(211, 211, 211);
 }
 
-label {
+.connexion-label {
     margin-top: 2em;
     margin-bottom: 0.5em;
     text-align: left;
@@ -19,7 +19,7 @@ h1 {
     margin: 0;
 }
 
-button {
+.connexion-button {
     margin-top: 3em;
     padding: 0.2em;
     text-transform: uppercase;
