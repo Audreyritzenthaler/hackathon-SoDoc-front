@@ -10,7 +10,7 @@
   margin: 1rem 0.5rem 0.5rem 0.5rem;
 }
 
-.Dashboard h3 {
+.dash-title {
   margin: 1rem 0 0 1rem;
   color: #707070;
 }
@@ -26,6 +26,10 @@
   border-radius: 15px;
   width: 100%;
   height: 3vh;
+  outline: transparent;
+  padding-left: 1rem;
+  color: #707070;
+  font-size: 1.1rem;
 }
 
 /* .dash-button {

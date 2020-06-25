@@ -5,7 +5,8 @@ class Infos extends Component {
   render() {
     return (
       <div className='Infos'>
-        <h3>My Doctor</h3>
+        {/* si dashboard/patient pas de h3 */}
+        {/* <h3>My Doctor</h3> */}
         <div className='infos-details'>
           <i className="fas fa-user-circle" />
           <div className='infos-text'>
