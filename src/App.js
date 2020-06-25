@@ -8,7 +8,6 @@ import Connection from './components/Connection';
 function App() {
   return (
     <div className="App">
-      <h1>Sodoc</h1>
       <Switch>
         <Route exact path="/" component={Connection}/>
         <Route path="/logbook" component={LogBook}/>
