@@ -25,8 +25,10 @@ const Connection = () => {
     const getApi = (e) => {
         axios({
             method: 'post',
-            url: 'http://localhost:8080/authentification',
-            loginForm
+            url: 'http://localhost:8080/api/authentification',
+            data : {
+                ...loginForm
+            }
         })
             .then(() => {
                 setSuccess(true)
