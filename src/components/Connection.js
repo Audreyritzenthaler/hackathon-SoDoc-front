@@ -50,7 +50,7 @@ const Connection = () => {
                 <label for="pwd">Password :</label>
                 <input id="pwd" type="text" onChange={getPwd} placeholder="Enter your password"></input>
                 {failed ? <p className='incorrect'>Your login or your password is incorrect !</p> : ""}
-                {success ? <Redirect to="/success" /> : ""}
+                {success ? <Redirect to="/logbook" /> : ""}
                 <Link to path="/logbook"><button id="button" onClick={getApi}>Sign In</button></Link>
             </form>
         </div>
