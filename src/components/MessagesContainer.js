@@ -23,7 +23,6 @@ const MessagesContainer = () => {
     })
     setMessages(result.data)
     setMessagesPreview(resultPreview)
-    // console.log(result.data, resultPreview);
   };
 
   useEffect(() => {

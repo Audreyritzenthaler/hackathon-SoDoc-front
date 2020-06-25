@@ -2,7 +2,6 @@ import React from 'react'
 import './Messages.css'
 
 const Messages = (props) => {
-  console.log(props);
   return (
     <div className='Messages'>
       <p>{props.messagesPreview.preview}<button className="readMore">... read more</button></p>
