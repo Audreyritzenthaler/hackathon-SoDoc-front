@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Infos from '../Infos'
 import DosageAppContainer from '../DosageAppContainer'
-import MessagesContainer from '../MessagesContainer'
+import MessagesContainerDoctor from './MessagesContainerDoctor'
 import './Dashboard.css'
 import BurgerMenuPractitioner from './BurgerMenuPractitioner'
 
@@ -14,7 +14,7 @@ class PatientPage extends Component {
           <Infos />
           <DosageAppContainer />
         </div>
-        <MessagesContainer />
+        <MessagesContainerDoctor />
       </div>
     )
   }

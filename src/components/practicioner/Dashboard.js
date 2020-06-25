@@ -1,6 +1,6 @@
 import React from 'react'
 import Infos from '../Infos'
-import MessagesContainer from '../MessagesContainer'
+import MessagesContainerUrgent from './MessagesContainerUrgent'
 import './Dashboard.css'
 import BurgerMenuPractitioner from './BurgerMenuPractitioner'
 
@@ -16,7 +16,7 @@ const Dashboard = () => {
         </div>
         <Infos />
       </div>
-      <MessagesContainer />
+      <MessagesContainerUrgent />
     </div>
   )
 }
