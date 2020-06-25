@@ -14,12 +14,12 @@ const Connection = () => {
 
     const getLogin = (e) => {
         const logCatch = e.target.value
-        setLoginForm({...loginForm, mail: logCatch})
+        setLoginForm({ ...loginForm, mail: logCatch })
     }
 
     const getPwd = (e) => {
         const pwdCatch = e.target.value
-        setLoginForm({...loginForm ,pwd: pwdCatch })
+        setLoginForm({ ...loginForm, pwd: pwdCatch })
     }
 
     const getApi = (e) => {
@@ -30,30 +30,30 @@ const Connection = () => {
                 loginForm
             }
         })
-        .then(() => {
-            setSuccess(true)
-        })
-        .catch(() => {
-            setFailed(true)
-        })
+            .then(() => {
+                setSuccess(true)
+            })
+            .catch(() => {
+                setFailed(true)
+            })
     }
 
-    return(
+    return (
         <div>
             <button>
                 <Link to="/dashboard">I'm a practitioner</Link>
             </button>
 
-                <form className="form">
-                    <h1 className="title">Sodoc</h1>
-                    <label for="eMail">eMail :</label>
-                    <input id="eMail" type="text" onChange={getLogin} placeholder="Enter your adress mail"></input>
-                    <label for="pwd">Password :</label>
-                    <input id="pwd" type="text" onChange={getPwd} placeholder="Enter your password"></input>
-                    { failed ? <p className='incorrect'>Your login or your password is incorrect !</p> : "" }
-                    { success ? <Redirect to="/success" /> : "" }
-                    <Link to path="/logbook"><button id="button" onClick={getApi}>Sign In</button></Link>
-                </form>
+            <form className="form">
+                <h1 className="title">Sodoc</h1>
+                <label for="eMail">eMail :</label>
+                <input id="eMail" type="text" onChange={getLogin} placeholder="Enter your adress mail"></input>
+                <label for="pwd">Password :</label>
+                <input id="pwd" type="text" onChange={getPwd} placeholder="Enter your password"></input>
+                {failed ? <p className='incorrect'>Your login or your password is incorrect !</p> : ""}
+                {success ? <Redirect to="/success" /> : ""}
+                <Link to path="/logbook"><button id="button" onClick={getApi}>Sign In</button></Link>
+            </form>
         </div>
     )
 }
