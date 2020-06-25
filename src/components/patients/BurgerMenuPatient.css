@@ -40,7 +40,7 @@
   /* General sidebar styles */
   .bm-menu {
     background: #A7DCEF;
-    padding: 2.5em 3.7em 0;
+    padding: 5em;
     font-size: 1.15em;
   }
    
@@ -52,9 +52,10 @@
   /* Wrapper for item list */
   .list_burger {
     color: white;
-    margin: 2.5em 0;
+    margin: 3em 0;
     padding: 1em 0em;
     text-decoration: none;
+    white-space: nowrap;
   }
    
   /* Individual item */
@@ -74,4 +75,10 @@
   .power {
       color: #FF5252;
       border: none;
+  }
+
+  @media screen and (min-width:640px) {
+    .bm-burger-button {
+        display: none;
+    }
   }

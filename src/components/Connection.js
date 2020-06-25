@@ -43,7 +43,6 @@ const Connection = () => {
             </button>
 
             <form className="form">
-                <h1 className="title">Sodoc</h1>
                 <label for="eMail">eMail :</label>
                 <input id="eMail" type="text" onChange={getLogin} placeholder="Enter your adress mail"></input>
                 <label for="pwd">Password :</label>
