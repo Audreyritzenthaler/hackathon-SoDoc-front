@@ -39,7 +39,7 @@ const Connection = () => {
     return (
         <div>
             <button>
-                <Link to="/dashboard">I'm a practitioner</Link>
+                <Link to="/practitioner/messages">I'm a practitioner</Link>
             </button>
 
             <form className="form">
