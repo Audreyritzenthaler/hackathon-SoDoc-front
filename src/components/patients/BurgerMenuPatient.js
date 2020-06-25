@@ -11,7 +11,7 @@ const BurgerMenuPatient = () => {
             <NavLink to="/dosages" activeClassName="selected" className="list_burger">My dosages</NavLink>
             <NavLink to="/appointement" activeClassName="selected" className="list_burger">My appoitements</NavLink>
             <NavLink to="/infos" activeClassName="selected" className="list_burger">Settings</NavLink>
-            <NavLink to="/connection" activeClassName="selected" className="list_burger"></NavLink>
+            <NavLink to="/" activeClassName="selected" className="power"><i class="fas fa-power-off"></i></NavLink>
         </Menu>
     )
 }
