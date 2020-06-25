@@ -51,7 +51,7 @@ const Connection = () => {
                 <input className='connexion-input' id="pwd" type="text" onChange={getPwd} placeholder="Enter your password"></input>
                 {failed ? <p className='incorrect'>Your login or your password is incorrect !</p> : ""}
                 {success ? <Redirect to="/logbook" /> : ""}
-                <Link to path="/logbook"><button className='connexion-button' id="button" onClick={getApi}>Sign In</button></Link>
+                <button className='connexion-button' id="button" onClick={getApi}><Link to path="/logbook">Sign In</Link></button>
             </form>
         </div>
     )
