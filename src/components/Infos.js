@@ -1,24 +1,25 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
+import Axios from 'axios'
+import PatientsList from './PatientList'
 import './Infos.css'
 
-class Infos extends Component {
-  render() {
-    return (
-      <div className='Infos'>
-        {/* si dashboard/patient pas de h3 */}
-        {/* <h3>My Doctor</h3> */}
-        <div className='infos-details'>
-          <i className="fas fa-user-circle" />
-          <div className='infos-text'>
-            <p className='infos-first-last-name'>Dr Pierre Martin</p>
-            <p>Psychiatre</p>
-            <p>13 rue des Camélias</p>
-            <p>75015 Paris</p>
-          </div>
-        </div>
-      </div>
-    )
+
+const Infos = () => {
+  const [patients, setPatients] = useState(null)
+
+  const getPatientByPratitioner = () => {
+    Axios.get('http://localhost:8080/api/doctors/1/patients')
+      .then((res) => setPatients(res.data))
   }
+
+  useEffect(() => getPatientByPratitioner(), [])
+
+  return (patients === null ? 'Loading...' : (
+    <div className='Infos'>
+      {patients.map((patient, index) => <PatientsList patients={patients[index]} />)}
+    </div>
+  )
+  )
 }
 
 export default Infos
