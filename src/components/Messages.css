@@ -1,0 +1,24 @@
+.Messages {
+  background-color: white;
+  color: #707070;
+  text-align: left;
+  padding: 1rem;
+  width: 90%;
+  margin: 0 auto 1rem auto;
+  border-radius: 10px;
+}
+
+.Messages p {
+  margin: 0;
+}
+
+.msg-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.msg-small {
+  font-style: italic;
+  font-size: 12px;
+}

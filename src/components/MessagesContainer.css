@@ -1,0 +1,10 @@
+.MessagesContainer {
+  background-color: #DEF3F5;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.MessagesContainer h3 {
+  color: #707070;
+  padding-left: 1rem;
+}
