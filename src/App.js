@@ -4,10 +4,12 @@ import './App.css';
 import LogBook from './components/patients/LogBook';
 import Dashboard from './components/practicioner/Dashboard'
 import Connection from './components/Connection';
+import BurgerMenuPatient from './components/patients/BurgerMenuPatient';
 
 function App() {
   return (
     <div className="App">
+      <BurgerMenuPatient />
       <h1>Sodoc</h1>
       <Switch>
         <Route exact path="/" component={Connection}/>
