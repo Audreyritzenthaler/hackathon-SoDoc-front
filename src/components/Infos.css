@@ -1,17 +1,13 @@
 .Infos {
   background-color: #DEF3F5;
-  width: 30%;
+  color: #707070;
   border-radius: 10px;
   text-align: left;
   padding: 1rem;
 }
 
-.Infos p {
-  margin: 0em;
-}
-
 .Infos h3 {
-  margin: 0;
+  margin: 1rem;
 }
 
 .fa-user-circle {
