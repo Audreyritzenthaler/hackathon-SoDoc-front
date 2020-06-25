@@ -27,7 +27,7 @@ const Connection = () => {
         axios({
             method: 'post',
             url: 'http://localhost:8080/api/authentification',
-            data : {
+            data: {
                 ...loginForm
             }
         })
@@ -46,13 +46,20 @@ const Connection = () => {
             </button>
 
             <form className="form">
+<<<<<<< HEAD
                 <label htmlFor="eMail">eMail :</label>
                 <input id="eMail" type="text" onChange={getLogin} placeholder="Enter your adress mail"></input>
                 <label htmlFor="pwd">Password :</label>
                 <input id="pwd" type="text" onChange={getPwd} placeholder="Enter your password"></input>
+=======
+                <label className='connexion-label' for="eMail">eMail :</label>
+                <input className='connexion-input' id="eMail" type="text" onChange={getLogin} placeholder="Enter your adress mail"></input>
+                <label className='connexion-label' for="pwd">Password :</label>
+                <input className='connexion-input' id="pwd" type="text" onChange={getPwd} placeholder="Enter your password"></input>
+>>>>>>> dev
                 {failed ? <p className='incorrect'>Your login or your password is incorrect !</p> : ""}
                 {success ? <Redirect to="/logbook" /> : ""}
-                <Link to path="/logbook"><button id="button" onClick={getApi}>Sign In</button></Link>
+                <Link to path="/logbook"><button className='connexion-button' id="button" onClick={getApi}>Sign In</button></Link>
             </form>
         </div>
     )

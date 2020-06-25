@@ -32,7 +32,7 @@ const MessagesContainer = () => {
 
     return (
       <div className='MessagesContainer'>
-        <h3>Mes messages</h3>
+        <h3 className='msg-container-title'>Story board</h3>
         <div className="scrollMessages">
           {
             messagesPreview.map((msg, i) =>
