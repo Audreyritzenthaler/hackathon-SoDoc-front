@@ -10,3 +10,8 @@
   padding-left: 1rem;
   margin: 1rem;
 }
+
+.scrollMessages {
+  height: 270pt;
+  overflow: auto;
+}

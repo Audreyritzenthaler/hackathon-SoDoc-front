@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, Redirect } from 'react-router-dom'
 import axios from 'axios'
 
+import MessagesContainer from './MessagesContainer'
 import './Connection.css'
 
 const Connection = () => {
@@ -45,9 +46,9 @@ const Connection = () => {
             </button>
 
             <form className="form">
-                <label for="eMail">eMail :</label>
+                <label htmlFor="eMail">eMail :</label>
                 <input id="eMail" type="text" onChange={getLogin} placeholder="Enter your adress mail"></input>
-                <label for="pwd">Password :</label>
+                <label htmlFor="pwd">Password :</label>
                 <input id="pwd" type="text" onChange={getPwd} placeholder="Enter your password"></input>
                 {failed ? <p className='incorrect'>Your login or your password is incorrect !</p> : ""}
                 {success ? <Redirect to="/logbook" /> : ""}
