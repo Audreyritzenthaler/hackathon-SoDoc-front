@@ -1,0 +1,33 @@
+.Infos {
+  background-color: #DEF3F5;
+  width: 30%;
+  border-radius: 10px;
+  color: #707070;
+  text-align: left;
+  padding: 1rem;
+}
+
+.Infos p {
+  margin: 0em;
+}
+
+.Infos h3 {
+  margin: 0;
+}
+
+.fa-user-circle {
+  font-size: 4rem;
+}
+
+.infos-details {
+  display: flex;
+  align-items: center;
+}
+
+.infos-text {
+  margin-left: 1rem;
+}
+
+.infos-first-last-name {
+  font-weight: 600;
+}
