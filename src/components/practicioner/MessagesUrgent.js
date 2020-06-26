@@ -13,7 +13,7 @@ const MessagesUrgent = ({ messageUrgent }) => {
       <p>{message}</p>
       <div className='msg-details'>
         <p className='msg-small'>Comment je me sens : {mood_status}</p>
-        <p className='msg-small'>{creation_date}</p>
+        <p className='msg-small'>{creation_date.replace('T', ' ').substr(0, 19).split(' ').join(' à ')}</p>
       </div>
     </div>
   )
