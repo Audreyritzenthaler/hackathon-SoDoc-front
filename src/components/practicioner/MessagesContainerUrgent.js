@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import Messages from '../patients/MessagesPatient'
+import MessagesDoctor from './MessagesDoctor'
 import '../MessagesContainer.css'
 import axios from 'axios'
 
-const MessagesContainer = () => {
+const MessagesContainerUrgent = () => {
   //   const [messages, setMessages] = useState({
   //     messagesFull: '',
   //     messagesPreview: ''
@@ -35,7 +35,7 @@ const MessagesContainer = () => {
       <div className="scrollMessages">
         {
           messagesPreview.map((msg, i) =>
-            <Messages key={i} mood={msg.mood_status} date={msg.creation_date.replace('T', ' ').substr(0, 19).split(' ').join(' à ')} messagesFull={messagesFull[i]} messagesPreview={messagesPreview[i]} />
+            <MessagesDoctor key={i} mood={msg.mood_status} date={msg.creation_date.replace('T', ' ').substr(0, 19).split(' ').join(' à ')} messagesFull={messagesFull[i]} messagesPreview={messagesPreview[i]} />
           )
         }
       </div>
@@ -43,4 +43,4 @@ const MessagesContainer = () => {
   )
 }
 
-export default MessagesContainer
+export default MessagesContainerUrgent

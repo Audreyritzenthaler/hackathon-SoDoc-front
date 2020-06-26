@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import Modal from '../Modal'
+import Modal from '../patients/ModalPatient'
 import '../Messages.css'
 
-const Messages = (props) => {
+const MessagesUrgent = (props) => {
   const [showModal, setShowModal] = useState(false)
   const openModal = () => {
     setShowModal(true)
@@ -22,29 +22,4 @@ const Messages = (props) => {
   )
 }
 
-export default Messages
-
-// import React, { useState } from 'react'
-
-// import Modal from './Modal'
-
-// import './LandingPage.css'
-
-// const LandingPage = () => {
-//   const [showModal, setShowModal] = useState(false)
-//   const openModal = () => {
-//     setShowModal(true)
-//   }
-//   const hideModal = () => {
-//     setShowModal(false)
-//   }
-//   return (
-//     <div className='landing-page'>
-//       <div className='intro-register'>
-//         <Modal show={showModal} handleClose={hideModal} />
-//         <button className='intro-button' onClick={openModal}>S'INSCRIRE</button>
-//       </div>
-//     </div>
-//   )
-// }
-// export default LandingPage
+export default MessagesUrgent

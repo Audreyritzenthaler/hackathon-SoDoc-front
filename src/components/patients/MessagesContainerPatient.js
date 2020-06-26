@@ -3,7 +3,7 @@ import Messages from './MessagesPatient'
 import '../MessagesContainer.css'
 import axios from 'axios'
 
-const MessagesContainer = () => {
+const MessagesContainerPatient = () => {
   //   const [messages, setMessages] = useState({
   //     messagesFull: '',
   //     messagesPreview: ''
@@ -43,4 +43,4 @@ const MessagesContainer = () => {
   )
 }
 
-export default MessagesContainer
+export default MessagesContainerPatient
