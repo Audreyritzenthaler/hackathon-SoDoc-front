@@ -22,7 +22,7 @@ const MessagesContainerPatient = ({ setMessages, messagesFull }) => {
       <div className="scrollMessages">
         {
           messagesFull.map((msg, i) =>
-            <Messages key={i} mood={msg.mood_status} date={msg.creation_date.replace('T', ' ').substr(0, 19).split(' ').join(' à ')} messagesFull={messagesFull[i]} />
+            <Messages key={i} mood={msg.mood_status} date={msg.creation_date.replace('T', ' ').substr(0, 19).split(' ').join(' at ')} messagesFull={messagesFull[i]} />
           )
         }
       </div>
