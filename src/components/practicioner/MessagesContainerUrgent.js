@@ -1,29 +1,43 @@
 import React, { useState, useEffect } from 'react'
-import MessagesDoctor from './MessagesDoctor'
 import '../MessagesContainer.css'
 import axios from 'axios'
+import MessagesUrgent from './MessagesUrgent'
 
 const MessagesContainerUrgent = () => {
-  //   const [messages, setMessages] = useState({
-  //     messagesFull: '',
-  //     messagesPreview: ''
-  // })
-  const [messagesFull, setMessages] = useState([])
-  const [messagesPreview, setMessagesPreview] = useState([])
+  const [messagesList, setMessagesList] = useState([])
 
   const fetchData = async () => {
     const result = await axios(
-      'http://localhost:8080/api/patients/1/messages?doctorId=1',
+      'http://localhost:8000/api/doctors/1/messages',
     )
-    const resultPreview = result.data.map(msg => {
-      const preview = msg.message.substr(0, 200)
-      const mood_status = msg.mood_status
-      const creation_date = msg.creation_date
-      return { preview, mood_status, creation_date }
+    const numberOfMessages = result.data.reduce((obj, v) => {
+      obj[v.id] = (obj[v.id] || 0) + 1
+      return obj
+    }, {})
+
+    const keysSorted = Object.keys(numberOfMessages).sort((a,b)=>{return numberOfMessages[b]-numberOfMessages[a]}).map(key => {
+      const NbMessages = numberOfMessages[key]
+      const id = key
+      return {id, NbMessages}
     })
-    setMessages(result.data)
-    setMessagesPreview(resultPreview)
-  };
+
+    const sortPerPatient = keysSorted.map(patient => {
+      const msgTab = result.data.map(msg => msg.id === Number(patient.id) ? msg : null).filter(Boolean)
+      return msgTab
+    })
+    const lastMessages = sortPerPatient.map(msgs => msgs[0])
+
+    const finalData = keysSorted.map(id => {
+      const total = lastMessages.map(msg => {
+        if (msg.id === Number(id.id)) {
+          msg.totalMessages = id.NbMessages
+          return msg
+        }
+      })
+      return total.filter(Boolean)
+    } )
+    setMessagesList(finalData)
+  }
 
   useEffect(() => {
     fetchData();
@@ -34,8 +48,8 @@ const MessagesContainerUrgent = () => {
       <h3 className='msg-container-title'>Story board</h3>
       <div className="scrollMessages">
         {
-          messagesPreview.map((msg, i) =>
-            <MessagesDoctor key={i} mood={msg.mood_status} date={msg.creation_date.replace('T', ' ').substr(0, 19).split(' ').join(' à ')} messagesFull={messagesFull[i]} messagesPreview={messagesPreview[i]} />
+          messagesList.map((msg, i) =>
+            <MessagesUrgent key={i} messageUrgent={msg[0]} />
           )
         }
       </div>
