@@ -15,7 +15,7 @@ const InfosDoctor = () => {
   useEffect(() => getPatientByPratitioner(), [])
 
   return (patients === null ? 'Loading...' : (
-    <div className='Infos'>
+    <div>
       {patients.map((patient, index) => <PatientsList patients={patients[index]} />)}
     </div>
   )

@@ -1,13 +1,13 @@
 .Dashboard {
-  display: flex;
-  justify-content: center;
   text-align: left;
+  margin: auto;
+  width: 80%;
 }
 
 .dash-info-container {
   background-color: #A7DCEF;
   border-radius: 10px;
-  margin: 1rem 0.5rem 0.5rem 0.5rem;
+  margin: 1rem
 }
 
 .dash-title {
@@ -32,9 +32,6 @@
   font-size: 1.1rem;
 }
 
-/* .dash-button {
-  border: 1px solid #A7DCEF;
-  background-color: white;
-  border-radius: 15px;
-  padding: 0 1rem;
-} */
+.body-container {
+  display: flex;
+}

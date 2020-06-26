@@ -9,11 +9,11 @@
 .msg-container-title {
   color: #707070;
   padding-left: 1rem;
-  margin: 1rem;
+  margin: 0 1rem 1rem 0;
 }
 
 .scrollMessages {
-  height: 270pt;
+  height: 341pt;
   overflow: auto;
   margin: 0 1rem 1rem 1rem;
 }
