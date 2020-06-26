@@ -17,3 +17,13 @@
   overflow: auto;
   margin: 0 1rem 1rem 1rem;
 }
+
+@media screen and (max-width: 460px) {
+  .MessagesContainer {
+    height: 352pt;
+  }
+
+  .scrollMessages {
+    height: 280pt;
+  }
+}

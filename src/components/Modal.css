@@ -49,3 +49,11 @@
   font-style: italic;
   font-size: 12px;
 }
+
+@media screen and (max-width: 460px) {
+  .modal-main {
+    width: 90%;
+    height: 70%;
+    overflow: auto;
+  }
+}
