@@ -13,7 +13,7 @@ const InfosDoctor = ({ filterName }) => {
 
   useEffect(() => getPatientByPratitioner(), [])
 
-  return (patients === null ? 'Loading...' : (
+  return (patients === null ? 'Loading...' : (console.log(patients) ||
     <div>
       {patients
       .filter(patient => patient.lastname.toLowerCase().startsWith(filterName.toLowerCase()))

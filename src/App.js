@@ -4,7 +4,7 @@ import './App.css';
 import LogBook from './components/patients/LogBook';
 import Dashboard from './components/practicioner/Dashboard'
 import Connection from './components/Connection';
-import PatientPage from './components/practicioner/PatientPage'
+import PatientPageDoctor from './components/practicioner/PatientPageDoctor'
 import './components/patients/BurgerMenuPatient.css'
 import MessagesContainerUrgent from './components/practicioner/MessagesContainerUrgent'
 import DosagePatient from './components/patients/DosagePatient'
@@ -39,9 +39,9 @@ const App = () => {
 
 
         {/* practicioner routes */}
+        <Route path="/dashboard/patient/:id" component={PatientPageDoctor} />
         { width < 640 ? <Route path="/dashboard" component={MessagesContainerUrgent} /> : <Route path="/dashboard" component={Dashboard} /> }
         <Route path="/dashboard" component={Dashboard} />
-        {/* <Route path="/dashboard/patient" component={PatientPage} /> */}
         <Route path="/practitioner/messages" component={MessagesContainerUrgent} />
         <Route path="/practitioner/patients" component={InfosDoctor} />
         {/* <Route path="/practiotioner/infos" component={MyInfos} /> */}
