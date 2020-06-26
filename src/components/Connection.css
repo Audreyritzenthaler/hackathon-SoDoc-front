@@ -1,93 +1,105 @@
 .form {
-    margin: auto;
-    padding: 3em;
-    display: flex;
-    flex-flow: column nowrap;
-    width: 50%;
-    background-color: #DEF3F5;
-    border-radius: 8px;
+  margin: auto;
+  padding: 3em;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 50%;
+  background-color: #DEF3F5;
+  border-radius: 8px;
 }
 
 .connexion-label {
-    margin-top: 2em;
-    margin-bottom: 0.5em;
-    text-align: left;
-    color: #679B9B;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  text-align: left;
+  color: #679B9B;
 }
 
 .titleLog {
-    margin: 1.5em 0 3em 0;
-    padding-bottom: 1.5em;
-    color: #679B9B;
-    border-bottom: 3px solid rgb(255, 255, 255);
+  margin: 1.5em 0 3em 0;
+  padding-bottom: 1.5em;
+  color: #679B9B;
+  border-bottom: 3px solid rgb(255, 255, 255);
 }
 
 .connexion-button {
-    text-transform: uppercase;
-    margin: 3em auto 0 auto;
-    width: 100px;
-    background-color: #679B9B;
-    border: 1px solid transparent;
-    outline: transparent;
-    border-radius: 5px;
-    padding: 0.5rem;
-    font-weight: 600;
-    font-size: 0.8rem;
+  text-transform: uppercase;
+  margin: 3em auto 0 auto;
+  width: 100px;
+  background-color: #679B9B;
+  border: 1px solid transparent;
+  outline: transparent;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-weight: 600;
+  font-size: 0.8rem;
 }
 
 .logLink {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .incorrect {
-    color: red;
+  color: red;
 }
 
 .connexion-input {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #CCC;
-    color: #555;
-  }
-  
-  .underline {
-    background-color: dodgerblue;
-    display: inline-block;
-    height: 2px;
-    left: 50px;
-    margin-top: -4px;
-    position: absolute;
-    top: 185px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #CCC;
+  color: #555;
+}
+
+.underline {
+  background-color: dodgerblue;
+  display: inline-block;
+  height: 2px;
+  left: 50px;
+  margin-top: -4px;
+  position: absolute;
+  top: 185px;
+}
+
+.TabSelector {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
+}
+
+.TabSelector button {
+  margin: 5em 0 0 0;
+  border: 2px solid transparent;
+  background: white;
+  font-size: 1rem;
+  padding: 0.5rem;
+  flex-grow: 1;
+  border-bottom: 2px solid #eee;
+}
+
+.TabSelector button.active {
+  border-bottom: 2px solid #FF5252;
+}
+
+.TabSelector button:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 640px) {
+  .form {
+    width: 85%;
   }
 
-  .TabSelector {
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-    margin: auto;
+  .titleLog {
+    margin: 0;
   }
-  
+
+  .connexion-label {
+    margin-top: 1em;
+  }
+
   .TabSelector button {
-    margin: 5em 0 0 0;
-    border: 2px solid transparent;
-    background: white;
-    font-size: 1rem;
-    padding: 0.5rem;
-    flex-grow: 1;
-    border-bottom: 2px solid #eee;
+    margin: 0;
   }
-  
-  .TabSelector button.active {
-    border-bottom: 2px solid #FF5252;
-  }
-  
-  .TabSelector button:focus {
-    outline: none;
-  }
-
-  @media screen and (max-width: 640px) {
-      .form {
-          width: 85%;
-      }
-  }
+}

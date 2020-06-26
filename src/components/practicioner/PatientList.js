@@ -1,8 +1,9 @@
 import React from 'react'
+import '../Infos.css'
 
 const PatientList = ({ patients }) => {
     return (
-        <div className='infos-details'>
+        <div className='infos-details-doc'>
             <i className="fas fa-user-circle" />
             <div className='infos-text'>
                 <p className='infos-first-last-name'>{patients.lastname.toUpperCase()} {patients.firstname}</p>

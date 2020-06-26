@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import TabSelector from './TableSelector'
 import axios from 'axios'
+import logo from '../logo.png'
 
 import './Connection.css'
 import LogForm from './LogForm'
@@ -26,36 +27,36 @@ const Connection = () => {
 
     const handleChangeTab = event => {
         const buttonId = event.target.id
-        setActiveId( buttonId )
-      }
-    
+        setActiveId(buttonId)
+    }
+
     const getTabContent = () => {
         switch (activeId) {
-          case "practitioner":
-            return <LogForm
-            switch={'dashboard'}
-            getApi={getApi}
-            getLogin={getLogin}
-            getPwd={getPwd}
-            success={success}
-            failed={failed}
-        />
-          case "patient":
-            return <LogForm 
-                switch={'logbook'}
-                getApi={getApi}
-                getLogin={getLogin}
-                getPwd={getPwd}
-                success={success}
-                failed={failed}
-            />
-          default:
-            return 'Error'
+            case "practitioner":
+                return <LogForm
+                    switch={'dashboard'}
+                    getApi={getApi}
+                    getLogin={getLogin}
+                    getPwd={getPwd}
+                    success={success}
+                    failed={failed}
+                />
+            case "patient":
+                return <LogForm
+                    switch={'logbook'}
+                    getApi={getApi}
+                    getLogin={getLogin}
+                    getPwd={getPwd}
+                    success={success}
+                    failed={failed}
+                />
+            default:
+                return 'Error'
         }
-      }
+    }
 
-      const getApi = (e) => {
-          e.preventDefault()
+    const getApi = (e) => {
+        e.preventDefault()
         axios({
             method: 'post',
             url: 'http://localhost:8080/api/authentification',
@@ -73,11 +74,14 @@ const Connection = () => {
 
     return (
         <div>
-            <TabSelector
-          handleChangeTab={handleChangeTab}
-          activeId={activeId}
-        />
-        <div className="App-content">{getTabContent()}</div>
+            <img src={logo} alt="" style={{ marginTop: '1rem' }} />
+            <div>
+                <TabSelector
+                    handleChangeTab={handleChangeTab}
+                    activeId={activeId}
+                />
+                <div className="App-content">{getTabContent()}</div>
+            </div>
         </div>
     )
 }

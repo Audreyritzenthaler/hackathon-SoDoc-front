@@ -16,6 +16,17 @@
   align-items: center;
 }
 
+.infos-details-doc {
+  background-color: #DEF3F5;
+  color: #707070;
+  border-radius: 10px;
+  text-align: left;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+}
+
 .infos-text {
   margin-left: 1rem;
 }
