@@ -19,7 +19,7 @@ const Dashboard = () => {
           <div className='dash-input-container'>
             <input type='text' value={filterName} onChange={(e) => setFilterName(e.target.value)} className='dash-input' />
           </div>
-          <InfosDoctor />
+          <InfosDoctor filterName={filterName}/>
         </div>
         <MessagesContainerUrgent />
       </div>

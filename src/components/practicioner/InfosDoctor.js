@@ -3,7 +3,7 @@ import Axios from 'axios'
 import PatientsList from './PatientList'
 import '../Infos.css'
 
-const InfosDoctor = () => {
+const InfosDoctor = ({ filterName }) => {
   const [patients, setPatients] = useState(null)
 
   const getPatientByPratitioner = () => {
@@ -15,7 +15,12 @@ const InfosDoctor = () => {
 
   return (patients === null ? 'Loading...' : (
     <div>
-      {patients.map((patient, index) => <PatientsList patients={patients[index]} />)}
+      {patients
+      .filter(patient => patient.lastname.toLowerCase().startsWith(filterName.toLowerCase()))
+      .filter(Boolean)
+      .map(patient => 
+      <PatientsList patient={patient} />
+      )}
     </div>
   )
   )
