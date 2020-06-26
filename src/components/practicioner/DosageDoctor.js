@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import './Dosage.css'
+import '../Dosage.css'
 
-class Dosage extends Component {
+class DosageDoctor extends Component {
   render() {
     return (
       <div className='Dosage'>
@@ -16,4 +16,4 @@ class Dosage extends Component {
   }
 }
 
-export default Dosage
+export default DosageDoctor

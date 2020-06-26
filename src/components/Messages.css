@@ -3,7 +3,7 @@
   color: #707070;
   text-align: left;
   padding: 1rem;
-  margin: 0 1rem;
+  margin: 0 0 1rem 0;
   border-radius: 10px;
 }
 
@@ -24,4 +24,13 @@
 
 .readMore {
   margin: 0;
+  border: none;
+  outline: none;
+  background-color: #679B9B;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  margin-left: 0.2rem;
 }

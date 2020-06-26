@@ -1,6 +1,6 @@
 import React from 'react'
-import Infos from '../Infos'
-import MessagesContainer from '../MessagesContainer'
+import InfosDoctor from './InfosDoctor'
+import MessagesContainerUrgent from './MessagesContainerUrgent'
 import './Dashboard.css'
 import BurgerMenuPractitioner from './BurgerMenuPractitioner'
 
@@ -14,9 +14,9 @@ const Dashboard = () => {
           <input type='text' className='dash-input' />
           {/* <button className='dash-button'>Search</button> */}
         </div>
-        <Infos />
+        <InfosDoctor />
       </div>
-      <MessagesContainer />
+      <MessagesContainerUrgent />
     </div>
   )
 }

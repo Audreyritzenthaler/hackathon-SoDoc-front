@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import './Appointment.css'
+import '../Appointment.css'
 
-class Appointment extends Component {
+class AppointmentPatient extends Component {
   render() {
     return (
       <div className='Appointment'>
@@ -15,4 +15,4 @@ class Appointment extends Component {
   }
 }
 
-export default Appointment
+export default AppointmentPatient
