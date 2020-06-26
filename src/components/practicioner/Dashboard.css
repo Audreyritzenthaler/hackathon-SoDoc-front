@@ -35,3 +35,18 @@
 .body-container {
   display: flex;
 }
+
+@media screen and (max-width: 460px) {
+  .Dashboard {
+    width: 100%;
+  }
+
+  .dash-info-container {
+    margin: 1rem 0 0 0;
+    width: 100%;
+  }
+
+  .dash-input {
+    height: 6vh;
+  }
+}

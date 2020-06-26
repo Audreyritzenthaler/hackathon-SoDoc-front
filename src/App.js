@@ -11,6 +11,7 @@ import DosagePatient from './components/patients/DosagePatient'
 import AppointmentPatient from './components/patients/AppointmentPatient';
 import InfosDoctor from './components/practicioner/InfosDoctor';
 import PatientPageMobile from './components/patients/PatientPageMobile'
+import AllPatientsPageMobile from './components/practicioner/AllPatientsPageMobile'
 
 const App = () => {
   const [width, setWidth] = useState(window.innerWidth)
@@ -28,7 +29,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Connection} />
         {/* patients routes */}
-        { width < 640 ? <Route path="/logbook" component={PatientPageMobile} /> : <Route path="/logbook" component={LogBook} /> }
+        {width < 640 ? <Route path="/logbook" component={PatientPageMobile} /> : <Route path="/logbook" component={LogBook} />}
         {/* <Route path="/logbook" component={LogBook} />
         <Route path="/mymessages" component={MessageContainerPatient} /> */}
         {/* <Route path="/logbook" component={LogBook} />
@@ -40,10 +41,10 @@ const App = () => {
 
         {/* practicioner routes */}
         <Route path="/dashboard/patient/:id" component={PatientPageDoctor} />
-        { width < 640 ? <Route path="/dashboard" component={MessagesContainerUrgent} /> : <Route path="/dashboard" component={Dashboard} /> }
+        {width < 640 ? <Route path="/dashboard" component={MessagesContainerUrgent} /> : <Route path="/dashboard" component={Dashboard} />}
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/practitioner/messages" component={MessagesContainerUrgent} />
-        <Route path="/practitioner/patients" component={InfosDoctor} />
+        <Route path="/practitioner/patients" component={AllPatientsPageMobile} />
         {/* <Route path="/practiotioner/infos" component={MyInfos} /> */}
       </Switch>
     </div>

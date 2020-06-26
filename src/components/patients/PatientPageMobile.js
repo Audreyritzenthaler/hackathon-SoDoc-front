@@ -5,8 +5,11 @@ import logo from '../../logo.png'
 import '../MessagesContainer.css'
 import BurgerMenu from './BurgerMenuPatient'
 
+
+
 const PatientPageMobile = () => {
   const [messagesFull, setMessages] = useState([])
+
   return (
     <div>
       <div>
