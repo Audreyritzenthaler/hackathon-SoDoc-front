@@ -25,9 +25,14 @@
   }
 
   .scrollMessages {
-    height: 311pt;
+    height: 118pt;
     margin-bottom: 0;
   }
+
+  /* 
+  .urg {
+    height: 309pt;
+  } */
 
   .urg-container {
     height: 367pt;

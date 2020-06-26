@@ -19,7 +19,7 @@ const MessagesContainerPatient = ({ setMessages, messagesFull, idPatient }) => {
   return (
     <div className='MessagesContainer'>
       <h3 className='msg-container-title'>Story board</h3>
-      <div className="scrollMessages">
+      <div className="scrollMessages patient">
         {
           messagesFull.map((msg, i) =>
             <Messages key={i} mood={msg.mood_status} date={msg.creation_date.replace('T', ' ').substr(0, 19).split(' ').join(' at ')} messagesFull={messagesFull[i]} />
