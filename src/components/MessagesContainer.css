@@ -20,10 +20,12 @@
 
 @media screen and (max-width: 460px) {
   .MessagesContainer {
-    height: 352pt;
+    height: 162pt;
+    margin: 0;
   }
 
   .scrollMessages {
-    height: 280pt;
+    height: 116pt;
+    margin-bottom: 0;
   }
 }
