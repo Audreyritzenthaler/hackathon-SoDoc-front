@@ -3,7 +3,6 @@ import React from 'react'
 import '../Modal.css'
 
 const ModalPatient = ({ handleClose, show, messagesFull }) => {
-  console.log(messagesFull)
   return (
     <div className={show ? 'modal display-block' : 'modal display-none'}>
       <section className='modal-main'>
