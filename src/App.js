@@ -21,7 +21,7 @@ function App() {
 
 
         {/* practicioner routes */}
-        <Route path="/dashboard/patient" component={PatientPageDoctor} />
+        <Route path="/dashboard/patient/:id" component={PatientPageDoctor} />
         <Route path="/dashboard" component={Dashboard} />
         {/* <Route path="/practitioner/messages" component={Dashboard} /> */}
         {/* <Route path="/practiotioner/patients" component={AllPatients} />

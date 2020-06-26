@@ -16,7 +16,7 @@ const InfosDoctor = () => {
 
   return (patients === null ? 'Loading...' : (
     <div className='Infos'>
-      {patients.map((patient, index) => <PatientsList patients={patients[index]} />)}
+      {patients.map((patient, index) => <PatientsList patients={patients[index]}/>)}
     </div>
   )
   )
