@@ -1,23 +1,23 @@
 import React, { Component } from 'react'
 import InfosDoctor from './InfosDoctor'
-import DosageAppContainer from '../DosageAppContainer'
-import MessagesContainer from '../MessagesContainer'
+import DosageAppContainerDoctor from './DosageAppContainerDoctor'
+import MessagesContainerDoctor from './MessagesContainerDoctor'
 import BurgerMenuPractitioner from './BurgerMenuPractitioner'
 import './Dashboard.css'
 
-class PatientPage extends Component {
+class PatientPageDoctor extends Component {
   render() {
     return (
       <div className='Dashboard'>
         <BurgerMenuPractitioner />
         <div>
           <InfosDoctor />
-          <DosageAppContainer />
+          <DosageAppContainerDoctor />
         </div>
-        <MessagesContainer />
+        <MessagesContainerDoctor />
       </div>
     )
   }
 }
 
-export default PatientPage
+export default PatientPageDoctor
