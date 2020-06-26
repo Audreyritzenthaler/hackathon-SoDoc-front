@@ -15,7 +15,7 @@ const MessagesPatient = (props) => {
       <p>{props.messagesFull.message.substr(0, 200)}...<button className="readMore" onClick={openModal}>read more</button></p>
       <ModalPatient show={showModal} handleClose={hideModal} messagesFull={props.messagesFull} />
       <div className='msg-details'>
-        <p className='msg-small'>Comment je me sens : {props.mood}</p>
+        <p className='msg-small'>How I feel : {props.mood}</p>
         <p className='msg-small'>{props.date}</p>
       </div>
     </div>

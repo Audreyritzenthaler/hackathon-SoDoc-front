@@ -15,7 +15,7 @@ class AppointmentPatient extends Component {
           <h3>My appointments</h3>
           <div className='app-details'>
             <p>Date</p>
-            <p>Heure</p>
+            <p>Hour</p>
           </div>
         </div>
       </div>

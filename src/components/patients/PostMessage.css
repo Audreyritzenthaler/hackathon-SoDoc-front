@@ -62,3 +62,22 @@ hr {
   border: 1px solid #DEF3F5;
   margin-top: 1rem;
 }
+
+@media screen and (max-width: 460px) {
+  .post-radio-button-container {
+    display: block;
+  }
+
+  .post-button {
+    margin-left: 190px;
+    margin-top: 5px;
+    padding: 0.2em;
+    font-size: 18px;
+  }
+
+  .feeling {
+    text-align: left;
+    margin-top: -10px;
+    margin-bottom: 3px;
+  }
+}

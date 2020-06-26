@@ -14,9 +14,9 @@ class DosagePatient extends Component {
         <div className='Dosage'>
           <h3>My dosages</h3>
           <div className='dosage-details'>
-            <p>Nom du médicament</p>
-            <p>Posologie</p>
-            <p>Durée du traitement</p>
+            <p>Drug name</p>
+            <p>Dosage</p>
+            <p>Duration of treatment</p>
           </div>
         </div>
       </div>
