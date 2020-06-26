@@ -44,8 +44,8 @@ const PostMessage = ({ setMessages, messagesFull }) => {
           <textarea className='post-text' value={message} name="" id="msg" cols="20" rows="5" onChange={catchMessage}></textarea>
           <hr />
           <div className='post-radio-button-container'>
+            <p className="feeling">How I feel :</p>
             <div className='post-buttons'>
-              <p>How I feel :</p>
               <div className='post-radio-button'>
                 <input className='radio-button' type="radio" name='mood' value='5' checked={mood_status === '5'} onChange={handleOptionChange} />
                 <label htmlFor="5" className='post-label'>5</label>
