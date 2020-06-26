@@ -6,10 +6,12 @@ class NavBar extends Component {
   render() {
     return (
       <div className='NavBar'>
-        <img src={Logo} />
-        <p>My informations</p>
-        <p>Logout</p>
-        <button>Emergency</button>
+        <img src={Logo} alt='logo of feelback app' className='logo-app' />
+        <div className='navbar-menu'>
+          <a className='navbar-link'>My informations</a>
+          <a className='navbar-link'>Logout</a>
+          <button className='navbar-emergency'>Emergency</button>
+        </div>
       </div>
     );
   }

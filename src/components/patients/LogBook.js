@@ -1,6 +1,6 @@
 import React from 'react'
-import Infos from '../Infos'
-import DosageAppContainer from '../DosageAppContainer'
+import InfosPatient from './InfosPatient'
+import DosageAppContainerPatient from './DosageAppContainerPatient'
 import MessagesContainerPatient from './MessagesContainerPatient'
 import NavBar from '../NavBar'
 import PostMessage from './PostMessage'
@@ -14,10 +14,10 @@ const LogBook = () => {
         <NavBar />
       </div>
       <BurgerMenuPatient />
-      <div className='body'>
+      <div className='body-container'>
         <div className='container-left'>
-          <Infos />
-          <DosageAppContainer />
+          <InfosPatient />
+          <DosageAppContainerPatient />
         </div>
         <div>
           <PostMessage />

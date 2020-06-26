@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { Link, Redirect } from 'react-router-dom'
+import TabSelector from './TableSelector'
 import axios from 'axios'
 
 import './Connection.css'
+import LogForm from './LogForm'
 
 const Connection = () => {
     const [loginForm, setLoginForm] = useState({
@@ -11,6 +12,7 @@ const Connection = () => {
     })
     const [failed, setFailed] = useState()
     const [success, setSuccess] = useState()
+    const [activeId, setActiveId] = useState('patient')
 
     const getLogin = (e) => {
         const logCatch = e.target.value
@@ -22,7 +24,37 @@ const Connection = () => {
         setLoginForm({ ...loginForm, pwd: pwdCatch })
     }
 
-    const getApi = (e) => {
+    const handleChangeTab = event => {
+        const buttonId = event.target.id
+        setActiveId( buttonId )
+      }
+    
+    const getTabContent = () => {
+        switch (activeId) {
+          case "practitioner":
+            return <LogForm
+            switch={'dashboard'}
+            getApi={getApi}
+            getLogin={getLogin}
+            getPwd={getPwd}
+            success={success}
+            failed={failed}
+        />
+          case "patient":
+            return <LogForm 
+                switch={'logbook'}
+                getApi={getApi}
+                getLogin={getLogin}
+                getPwd={getPwd}
+                success={success}
+                failed={failed}
+            />
+          default:
+            return 'Error'
+        }
+      }
+
+      const getApi = (e) => {
         axios({
             method: 'post',
             url: 'http://localhost:8080/api/authentification',
@@ -40,19 +72,11 @@ const Connection = () => {
 
     return (
         <div>
-            <button>
-                <Link to="/practitioner/messages">I'm a practitioner</Link>
-            </button>
-
-            <form className="form">
-                <label className='connexion-label' for="eMail">eMail :</label>
-                <input className='connexion-input' id="eMail" type="text" onChange={getLogin} placeholder="Enter your adress mail"></input>
-                <label className='connexion-label' for="pwd">Password :</label>
-                <input className='connexion-input' id="pwd" type="text" onChange={getPwd} placeholder="Enter your password"></input>
-                {failed ? <p className='incorrect'>Your login or your password is incorrect !</p> : ""}
-                {success ? <Redirect to="/logbook" /> : ""}
-                <Link to path="/logbook"><button className='connexion-button' id="button" onClick={getApi}>Sign In</button></Link>
-            </form>
+            <TabSelector
+          handleChangeTab={handleChangeTab}
+          activeId={activeId}
+        />
+        <div className="App-content">{getTabContent()}</div>
         </div>
     )
 }

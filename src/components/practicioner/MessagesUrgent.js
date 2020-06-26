@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import Modal from '../Modal'
+import React from 'react'
+
 import '../Messages.css'
 
 const MessagesUrgent = ({messageUrgent}) => {
