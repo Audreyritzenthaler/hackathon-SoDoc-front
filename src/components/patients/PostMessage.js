@@ -38,7 +38,7 @@ const PostMessage = ({ setMessages, messagesFull }) => {
 
   return (
     <div className='PostMessage'>
-      <h3 className='post-title'>Mon message</h3>
+      <h3 className='post-title'>My message</h3>
       <div className='post-container'>
         <div className='post-message'>
           <textarea className='post-text' value={message} name="" id="msg" cols="20" rows="5" onChange={catchMessage}></textarea>
@@ -72,7 +72,7 @@ const PostMessage = ({ setMessages, messagesFull }) => {
               </div>
             </div>
             <div>
-              <button className='post-button' onClick={postMessage} type="submit">Envoyer</button>
+              <button className='post-button' onClick={postMessage} type="submit">Send</button>
             </div>
           </div>
         </div>

@@ -39,7 +39,7 @@ const App = () => {
 
 
         {/* practicioner routes */}
-        { width < 640 ? <Route path="/dashboard" component={MessagesContainerUrgent} /> : <Route path="/logbook" component={Dashboard} /> }
+        { width < 640 ? <Route path="/dashboard" component={MessagesContainerUrgent} /> : <Route path="/dashboard" component={Dashboard} /> }
         <Route path="/dashboard" component={Dashboard} />
         {/* <Route path="/dashboard/patient" component={PatientPage} /> */}
         <Route path="/practitioner/messages" component={MessagesContainerUrgent} />

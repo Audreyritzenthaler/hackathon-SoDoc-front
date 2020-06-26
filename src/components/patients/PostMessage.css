@@ -70,11 +70,14 @@ hr {
 
   .post-button {
     margin-left: 190px;
-    margin-top: 8px;
+    margin-top: 5px;
+    padding: 0.2em;
+    font-size: 18px;
   }
 
   .feeling {
     text-align: left;
+    margin-top: -10px;
     margin-bottom: 3px;
   }
 }
