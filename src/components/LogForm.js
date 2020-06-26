@@ -3,7 +3,7 @@ import { Link, Redirect } from 'react-router-dom'
 
 import './Connection.css'
 
-const LogPractitioner = (props) => {
+const LogForm = (props) => {
     return (
         <div>
             <form className="form">
@@ -14,11 +14,11 @@ const LogPractitioner = (props) => {
                 <label className='connexion-label' for="pwd"><i class="fas fa-unlock-alt"></i></label>
                 <input className='connexion-input' id="pwd" type="password" onChange={props.getPwd} placeholder="password"></input>
                 {props.failed ? <p className='incorrect'>Your login or your password is incorrect !</p> : ""}
-                {props.success ? <Redirect to="/logbook" /> : ""}
+                {props.success ? <Redirect to={`/${props.switch}`} /> : ""}
                 <button className='connexion-button' id="button" onClick={props.getApi}><Link to path="/logbook" className="logLink">Sign In</Link></button>
             </form>
         </div>
     )
 }
 
-export default LogPractitioner
+export default LogForm

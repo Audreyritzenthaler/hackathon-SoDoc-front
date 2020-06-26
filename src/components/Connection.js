@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import TabSelector from './TableSelector'
 import axios from 'axios'
 
@@ -32,9 +32,23 @@ const Connection = () => {
     const getTabContent = () => {
         switch (activeId) {
           case "practitioner":
-            return <LogForm switch={'dashboard'}/>
+            return <LogForm
+            switch={'dashboard'}
+            getApi={getApi}
+            getLogin={getLogin}
+            getPwd={getPwd}
+            success={success}
+            failed={failed}
+        />
           case "patient":
-            return <LogForm switch={'logbook'}/>
+            return <LogForm 
+                switch={'logbook'}
+                getApi={getApi}
+                getLogin={getLogin}
+                getPwd={getPwd}
+                success={success}
+                failed={failed}
+            />
           default:
             return 'Error'
         }
@@ -60,12 +74,7 @@ const Connection = () => {
         <div>
             <TabSelector
           handleChangeTab={handleChangeTab}
-          getApi={getApi}
           activeId={activeId}
-          getLogin={getLogin}
-          getPwd={getPwd}
-          success={success}
-          failed={failed}
         />
         <div className="App-content">{getTabContent()}</div>
         </div>
