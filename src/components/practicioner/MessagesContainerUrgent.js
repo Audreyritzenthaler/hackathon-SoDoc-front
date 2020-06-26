@@ -51,7 +51,7 @@ const MessagesContainerUrgent = () => {
         <img src={logo} alt='logo of feelback' style={{ marginLeft: '1rem', marginTop: '1rem', width: '4rem' }} />
         <BurgerMenu />
       </div>
-      <div className='MessagesContainer'>
+      <div className='MessagesContainer urg-container'>
         <h3 className='msg-container-title'>Story board</h3>
         <div className="scrollMessages">
           {
