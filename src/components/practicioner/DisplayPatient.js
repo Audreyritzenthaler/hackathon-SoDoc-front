@@ -2,12 +2,10 @@ import React, { useState, useEffect } from 'react'
 import Axios from 'axios'
 import '../Infos.css'
 
-const DisplayPatient = (props) => {
+const DisplayPatient = ({idPatient}) => {
   const [patient, setPatient] = useState(null)
-  console.log('props.location',props.location)
-  const patientId = props.location
   const getPatient = () => {
-    Axios.get(`http://localhost:8080/api/doctors/1/patients/${patientId}`)
+    Axios.get(`http://localhost:8080/api/doctors/1/patients/${idPatient}`)
       .then((res) => setPatient(res.data))
   }
 

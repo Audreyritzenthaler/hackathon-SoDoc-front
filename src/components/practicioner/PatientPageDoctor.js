@@ -1,30 +1,17 @@
 import React, { useState } from 'react'
 import DisplayPatient from './DisplayPatient'
-import DosageAppContainerDoctor from './DosageAppContainerDoctor'
-import MessagesContainerDoctor from './MessagesContainerDoctor'
 import BurgerMenuPractitioner from './BurgerMenuPractitioner'
-import './Dashboard.css'
-
-
 import DosageAppContainerPatient from '../patients/DosageAppContainerPatient'
 import MessagesContainerPatient from '../patients/MessagesContainerPatient'
 import NavBarDoctor from './NavBarDoctor'
-// import BurgerMenuPatient from './BurgerMenuPatient'
-// import '../patients/LogBook.css'
 
-const PatientPageDoctor = () => {
+import './Dashboard.css'
+
+const PatientPageDoctor = (props) => {
   const [messagesFull, setMessages] = useState([])
+  const idPatient = props.match.params.id
 
     return (
-      // <div className='Dashboard'>
-      //   <BurgerMenuPractitioner />
-      //   <div>
-      //     <DisplayPatient />
-      //     <DosageAppContainerDoctor />
-      //   </div>
-      //   <MessagesContainerDoctor />
-      // </div>
-      
       <div className='Dashboard'>
       <div className='navbar-container'>
         <NavBarDoctor />
@@ -32,16 +19,15 @@ const PatientPageDoctor = () => {
       <BurgerMenuPractitioner />
       <div className='body-container'>
         <div className='container-left'>
-          <DisplayPatient />
+            <DisplayPatient idPatient={idPatient}/>
           <DosageAppContainerPatient />
         </div>
         <div>
-          <MessagesContainerPatient messagesFull={messagesFull} setMessages={setMessages} />
+          <MessagesContainerPatient messagesFull={messagesFull} setMessages={setMessages} idPatient={idPatient}/>
         </div>
       </div>
     </div>
     )
   }
-
 
 export default PatientPageDoctor

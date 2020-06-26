@@ -3,11 +3,11 @@ import Messages from './MessagesPatient'
 import '../MessagesContainer.css'
 import axios from 'axios'
 
-const MessagesContainerPatient = ({ setMessages, messagesFull }) => {
+const MessagesContainerPatient = ({ setMessages, messagesFull, idPatient }) => {
 
   const fetchData = async () => {
     const result = await axios(
-      'http://localhost:8080/api/patients/1/messages?doctorId=1',
+      `http://localhost:8080/api/patients/1/messages?doctorId=1`
     )
     setMessages(result.data)
   };
