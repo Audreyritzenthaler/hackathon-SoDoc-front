@@ -3,7 +3,6 @@ import Axios from 'axios'
 import PatientsList from './PatientList'
 import '../Infos.css'
 
-
 const InfosDoctor = () => {
   const [patients, setPatients] = useState(null)
 
