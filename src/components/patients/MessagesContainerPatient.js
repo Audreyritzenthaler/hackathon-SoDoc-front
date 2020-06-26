@@ -28,7 +28,7 @@ const MessagesContainerPatient = ({ setMessages, messagesFull }) => {
         <h3 className='msg-container-title'>Story board</h3>
         <div className="scrollMessages">
           {
-            messagesPreview.map((msg, i) =>
+            messagesFull.map((msg, i) =>
               <Messages key={i} mood={msg.mood_status} date={msg.creation_date.replace('T', ' ').substr(0, 19).split(' ').join(' à ')} messagesFull={messagesFull[i]} />
             )
           }
