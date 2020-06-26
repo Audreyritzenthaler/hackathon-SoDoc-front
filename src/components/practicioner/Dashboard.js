@@ -1,5 +1,5 @@
 import React from 'react'
-import Infos from '../Infos'
+import InfosDoctor from './InfosDoctor'
 import MessagesContainerUrgent from './MessagesContainerUrgent'
 import './Dashboard.css'
 import BurgerMenuPractitioner from './BurgerMenuPractitioner'
@@ -14,7 +14,7 @@ const Dashboard = () => {
           <input type='text' className='dash-input' />
           {/* <button className='dash-button'>Search</button> */}
         </div>
-        <Infos />
+        <InfosDoctor />
       </div>
       <MessagesContainerUrgent />
     </div>

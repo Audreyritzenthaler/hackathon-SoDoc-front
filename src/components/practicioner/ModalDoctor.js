@@ -1,8 +1,8 @@
 import React from 'react'
 
-import './Modal.css'
+import '../Modal.css'
 
-const Modal = ({ handleClose, show, messagesFull }) => {
+const ModalDoctor = ({ handleClose, show, messagesFull }) => {
   console.log(messagesFull)
   return (
     <div className={show ? 'modal display-block' : 'modal display-none'}>
@@ -18,4 +18,4 @@ const Modal = ({ handleClose, show, messagesFull }) => {
   )
 }
 
-export default Modal
+export default ModalDoctor

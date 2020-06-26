@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import './Infos.css'
+import '../Infos.css'
 
-class Infos extends Component {
+class InfosPatient extends Component {
   render() {
     return (
       <div className='Infos'>
@@ -21,4 +21,4 @@ class Infos extends Component {
   }
 }
 
-export default Infos
+export default InfosPatient
