@@ -1,4 +1,15 @@
 .LogBook {
   display: flex;
   justify-content: center;
+  width: 80%;
+  margin: auto;
+}
+
+.container-left {
+  width: 500px;
+  display: flex;
+}
+
+.navbar-container {
+  flex-grow: 4;
 }
