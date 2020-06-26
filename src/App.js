@@ -6,6 +6,11 @@ import Dashboard from './components/practicioner/Dashboard'
 import Connection from './components/Connection';
 import PatientPage from './components/practicioner/PatientPage'
 import './components/patients/BurgerMenuPatient.css'
+import MessageContainerPatient from './components/patients/MessagesContainerPatient'
+import DosagePatient from './components/patients/DosagePatient'
+import AppointmentPatient from './components/patients/AppointmentPatient';
+import MessagesContainerUrgent from './components/practicioner/MessagesContainerUrgent';
+import InfosDoctor from './components/practicioner/InfosDoctor';
 
 function App() {
   return (
@@ -14,18 +19,18 @@ function App() {
         <Route exact path="/" component={Connection} />
         {/* patients routes */}
         <Route path="/logbook" component={LogBook} />
-        {/* <Route path="/mymessage" component={MyMessage} /> */}
-        {/* <Route path="/mydosages" component={MyDosages} />
-        <Route path="/myappointements" component={MyAppointements} />
-        <Route path="/myinfos" component={MyInfos} /> */}
+        <Route path="/mymessages" component={MessageContainerPatient} />
+        <Route path="/mydosages" component={DosagePatient} />
+        <Route path="/myappointements" component={AppointmentPatient} />
+        {/* <Route path="/myinfos" component={MyInfos} /> */}
 
 
         {/* practicioner routes */}
         <Route path="/dashboard" component={Dashboard} />
-        <Route path="/dashboard/patient" component={PatientPage} />
-        {/* <Route path="/practitioner/messages" component={Dashboard} /> */}
-        {/* <Route path="/practiotioner/patients" component={AllPatients} />
-        <Route path="/practiotioner/infos" component={MyInfos} /> */}
+        {/* <Route path="/dashboard/patient" component={PatientPage} /> */}
+        <Route path="/practitioner/messages" component={MessagesContainerUrgent} />
+        <Route path="/practiotioner/patients" component={InfosDoctor} />
+        {/* <Route path="/practiotioner/infos" component={MyInfos} /> */}
       </Switch>
     </div>
   );
