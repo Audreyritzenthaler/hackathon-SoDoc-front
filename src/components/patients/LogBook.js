@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import InfosPatient from './InfosPatient'
 import DosageAppContainerPatient from './DosageAppContainerPatient'
 import MessagesContainerPatient from './MessagesContainerPatient'
@@ -8,6 +8,8 @@ import './LogBook.css'
 import BurgerMenuPatient from './BurgerMenuPatient'
 
 const LogBook = () => {
+  const [messagesFull, setMessages] = useState([])
+
   return (
     <div className='LogBook'>
       <div className='navbar-container'>
@@ -20,8 +22,8 @@ const LogBook = () => {
           <DosageAppContainerPatient />
         </div>
         <div>
-          <PostMessage />
-          <MessagesContainerPatient />
+          <PostMessage  messagesFull={messagesFull} setMessages={setMessages}/>
+          <MessagesContainerPatient messagesFull={messagesFull} setMessages={setMessages} />
         </div>
       </div>
     </div>

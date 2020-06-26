@@ -56,6 +56,7 @@ const Connection = () => {
     }
 
     const getApi = (e) => {
+        e.preventDefault()
         axios({
             method: 'post',
             url: 'http://localhost:8080/api/authentification',

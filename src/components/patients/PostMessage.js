@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import './PostMessage.css'
 
-const PostMessage = () => {
+const PostMessage = ({ setMessages, messagesFull }) => {
   const [message, setMessage] = useState('')
   const [mood_status, setmood_status] = useState()
 
@@ -26,6 +26,14 @@ const PostMessage = () => {
           message, doctorId, mood_status
       }
   })
+  .then(res => {
+    const temp = [...messagesFull]
+    console.log(temp);
+    temp.unshift(res.data)
+    setMessages(temp)
+    setMessage('')
+    setmood_status()
+  })
 }
 
   return (
@@ -33,7 +41,7 @@ const PostMessage = () => {
       <h3 className='post-title'>Mon message</h3>
       <div className='post-container'>
         <div className='post-message'>
-          <textarea className='post-text' name="" id="msg" cols="20" rows="5" onChange={catchMessage}></textarea>
+          <textarea className='post-text' value={message} name="" id="msg" cols="20" rows="5" onChange={catchMessage}></textarea>
           <hr />
           <div className='post-radio-button-container'>
             <div className='post-buttons'>
