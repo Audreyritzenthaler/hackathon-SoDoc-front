@@ -43,7 +43,7 @@ const App = () => {
         <Route path="/dashboard" component={Dashboard} />
         {/* <Route path="/dashboard/patient" component={PatientPage} /> */}
         <Route path="/practitioner/messages" component={MessagesContainerUrgent} />
-        <Route path="/practiotioner/patients" component={InfosDoctor} />
+        <Route path="/practitioner/patients" component={InfosDoctor} />
         {/* <Route path="/practiotioner/infos" component={MyInfos} /> */}
       </Switch>
     </div>
