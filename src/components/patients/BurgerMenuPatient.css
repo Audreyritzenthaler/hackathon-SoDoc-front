@@ -25,7 +25,7 @@
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #bdc3c7;
+  background: #8b8b8b;
 }
 
 /*
@@ -39,8 +39,9 @@
 /* General sidebar styles */
 .bm-menu {
   background: #A7DCEF;
-  padding-left: 2em;
-  font-size: 1.8em;
+  padding: 1.8em;
+  font-size: 1.5em;
+  text-align: left;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -51,7 +52,7 @@
 /* Wrapper for item list */
 .list_burger {
   color: white;
-  margin: 1rem 0;
+  margin: 1.5em 0;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -73,6 +74,7 @@
 .power {
   color: #FF5252;
   border: none;
+  margin-top: 5em;
 }
 
 @media screen and (min-width:640px) {
