@@ -27,3 +27,9 @@
   width: 6rem;
   margin: 1rem 0;
 }
+
+@media screen and (max-width: 460px) {
+  .nav-bar-container {
+    display: none;
+  }
+}

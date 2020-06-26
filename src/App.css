@@ -1,3 +1,13 @@
 .App {
   text-align: center;
 }
+
+.nav-responsive {
+  display: none;
+}
+
+@media screen and (max-width: 460px) {
+  .nav-responsive {
+    display: flex;
+  }
+}

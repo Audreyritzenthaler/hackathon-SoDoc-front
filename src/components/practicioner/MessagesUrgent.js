@@ -2,11 +2,14 @@ import React from 'react'
 
 import '../Messages.css'
 
-const MessagesUrgent = ({messageUrgent}) => {
-  const {id, firstname, lastname, message, mood_status, totalMessages, creation_date} = messageUrgent
+const MessagesUrgent = ({ messageUrgent }) => {
+  const { id, firstname, lastname, message, mood_status, totalMessages, creation_date } = messageUrgent
   return (
     <div className='Messages'>
-      <p>{lastname} {firstname} {totalMessages}</p>
+      <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '1rem' }}>
+        <p style={{ fontWeight: '600', fontSize: '20px', color: '#679B9B' }}>{lastname} {firstname}</p>
+        <div style={{ color: 'red', fontWeight: '600', fontSize: '20px' }}>{totalMessages}</div>
+      </div>
       <p>{message}</p>
       <div className='msg-details'>
         <p className='msg-small'>Comment je me sens : {mood_status}</p>
