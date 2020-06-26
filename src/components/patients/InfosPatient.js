@@ -1,24 +1,31 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
+import Axios from 'axios'
 import '../Infos.css'
 
-class InfosPatient extends Component {
-  render() {
-    return (
-      <div className='Infos'>
-        {/* si dashboard/patient pas de h3 */}
-        {/* <h3>My Doctor</h3> */}
-        <div className='infos-details'>
-          <i className="fas fa-user-circle" />
-          <div className='infos-text'>
-            <p className='infos-first-last-name'>Dr Pierre Martin</p>
-            <p>Psychiatre</p>
-            <p>13 rue des Camélias</p>
-            <p>75015 Paris</p>
-          </div>
-        </div>
-      </div>
-    )
+const InfosPatient = () => {
+  const [doctors, setDoctors] = useState(null)
+  
+  const getPractitioner = () => {
+    Axios.get('http://localhost:8080/api/doctors/1')
+      .then((res) => setDoctors(res.data))
   }
+
+  useEffect(() => getPractitioner(), [])
+  
+  return (doctors === null ? 'loading...' : (
+    <div className='Infos'>
+      {doctors.map((doctor, index) => 
+      <div className='infos-details'>
+      <i className="fas fa-user-circle" />
+      <div className='infos-text'>
+          <p className='infos-first-last-name'>{doctor.lastname.toUpperCase()} {doctor.firstname}</p>
+          <p>{doctor.email}</p>
+          <p>{doctor.phoneNumber}</p>
+      </div>
+    </div>
+      )}
+    </div>
+    ))
 }
 
 export default InfosPatient
