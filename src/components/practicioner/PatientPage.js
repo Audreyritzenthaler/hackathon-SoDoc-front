@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import Infos from '../Infos'
+import InfosDoctor from './InfosDoctor'
 import DosageAppContainer from '../DosageAppContainer'
 import MessagesContainer from '../MessagesContainer'
-import './Dashboard.css'
 import BurgerMenuPractitioner from './BurgerMenuPractitioner'
+import './Dashboard.css'
 
 class PatientPage extends Component {
   render() {
@@ -11,7 +11,7 @@ class PatientPage extends Component {
       <div className='Dashboard'>
         <BurgerMenuPractitioner />
         <div>
-          <Infos />
+          <InfosDoctor />
           <DosageAppContainer />
         </div>
         <MessagesContainer />
